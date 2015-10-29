@@ -1,14 +1,10 @@
 <?php
 
-class Hackathon_AsyncIndex_AsyncindexController extends Mage_Adminhtml_Controller_Action
+class Hackathon_AsyncIndex_Adminhtml_Async_AsyncindexController extends Mage_Adminhtml_Controller_Action
 {
 
-    /**
-     * has to be there :-(
-     */
-    protected function _isAllowed()
-    {
-        return true;
+    protected function _isAllowed() {
+        return Mage::getSingleton('admin/session')->isAllowed('system/asyncindex');
     }
 
     /**
